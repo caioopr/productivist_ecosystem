@@ -1,9 +1,7 @@
 <template>
-  <div class="container mx-auto max-w-6xl">
-    <div>
-      <h1>APP HEADER</h1>
-    </div>
-    <main class="my-10">
+  <div class="container mx-auto max-w-7xl">
+    <AppHeader />
+    <main class="my-10 mx-20">
       <!-- slot for NuxtPage -->
       <slot />
     </main>
@@ -36,6 +34,6 @@ body {
 
 /* Set the background color for the entire site */
 body {
-  @apply bg-white dark:bg-slate-900 
+  @apply bg-white dark:bg-black 
 }
 </style>
