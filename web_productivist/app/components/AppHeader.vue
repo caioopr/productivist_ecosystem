@@ -8,7 +8,8 @@
         <UHorizontalNavigation :links="links" :ui="{active: 'text-gray-900 dark:text-white after:white dark:after:bg-white after:rounded-full'}" class="border-b border-gray-200 dark:border-gray-800 " />
       </div>
 
-      <div>
+      <div class="flex flex-row gap-1.5 items-center">
+      <div class="flex items-center">
         <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
           <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
 
@@ -30,11 +31,37 @@
           </template>
         </UDropdown>
       </div>
+
+      <div class="flex md:hidden">
+        <UButton icon="i-heroicons-bars-3" color="white"  @click="isOpen = true" />
+
+        <USlideover v-model="isOpen" :ui="{background: 'bg-white dark:bg-black' }" :overlay="false">
+          <div class="p-4 flex-1">
+            <UButton
+              color="gray"
+              variant="ghost"
+              size="sm"
+              icon="i-heroicons-x-mark-20-solid"
+              class="flex sm:hidden absolute end-5 top-5 z-10"
+              square
+              padded
+              @click="isOpen = false"
+            />
+            <div class="mt-10">
+              <UVerticalNavigation :links="links" />
+            </div>
+            <Placeholder class="h-full" />
+          </div>
+          
+        </USlideover>
+      </div>
+      </div>
     </header>
 </template>
 
 
 <script setup lang="ts">
+const isOpen = ref(false);
 const items = [
   [{
     label: 'ben@example.com',
@@ -56,7 +83,7 @@ const items = [
     label: 'Sign out',
     icon: 'i-heroicons-arrow-left-on-rectangle'
   }]
-]
+];
 
 
 
@@ -83,5 +110,5 @@ const links = [{
   label: 'Statistics',
   icon: 'i-heroicons-chart-bar',
   to: '/statistics'
-}]
+}];
 </script>
