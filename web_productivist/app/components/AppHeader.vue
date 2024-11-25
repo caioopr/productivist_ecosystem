@@ -52,7 +52,6 @@
             </div>
             <Placeholder class="h-full" />
           </div>
-          
         </USlideover>
       </div>
       </div>
@@ -98,8 +97,8 @@ const links = [{
 },
 {
   label: 'Timers',
-  icon: 'i-heroicons-command-line',
-  to: '/statistics'
+  icon: 'i-heroicons-clock',
+  to: '/timers'
 }
   , {
   label: 'Calendar',
@@ -110,5 +109,10 @@ const links = [{
   label: 'Statistics',
   icon: 'i-heroicons-chart-bar',
   to: '/statistics'
+}
+  , {
+  label: 'Notes',
+  icon: 'i-heroicons-folder',
+  to: '/notes'
 }];
 </script>
