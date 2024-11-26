@@ -10,7 +10,7 @@
 
       <div class="flex flex-row gap-1.5 items-center">
       <div class="flex items-center">
-        <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }">
+        <UDropdown :items="items" :ui="{ item: { disabled: 'cursor-text select-text' } }" :popper="{ placement: 'bottom-start' }" >
           <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
 
           <template #account="{ item }">
@@ -50,7 +50,7 @@
             <div class="mt-10">
               <UVerticalNavigation :links="links" />
             </div>
-            <Placeholder class="h-full" />
+            <!-- <Placeholder class="h-full" /> -->
           </div>
         </USlideover>
       </div>
