@@ -1,5 +1,5 @@
 <template>
   <h1>
-    TIMERS PAGE
+    TIMER PAGE
   </h1>
 </template>
